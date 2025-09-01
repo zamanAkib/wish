@@ -1,0 +1,96 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #fffbea;
+    display: flex;
+    justify-content: center;
+    animation: bgFade 5s ease-in-out infinite alternate;
+}
+
+.birthday-title {
+    font-family: cursive;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff6f61;
+    /* soft warm color */
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.container {
+    text-align: center;
+}
+
+#wishContainer {
+    font-size: 1.4rem;
+    color: #5c4934;
+    margin-top: 20px;
+}
+
+.wish {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    margin: 8px 0;
+}
+
+.sunflower {
+    width: 300px;
+    height: 300px;
+    animation: spin 20s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bgFade {
+    0% {
+        background-color: #f9eec7;
+    }
+    50% {
+        background-color: #f8e5b0;
+    }
+    100% {
+        background-color: #f5e082;
+    }
+}
+
+
+/* doing some responsive design  */
+
+@media (max-width: 768px) {
+    .birthday-title {
+        font-size: 2rem;
+    }
+    #wishContainer {
+        font-size: 1rem;
+    }
+    .sunflower {
+        width: 70%;
+        height: 70%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-title {
+        font-size: 1.6rem;
+    }
+    #wishContainer {
+        font-size: 0.9rem;
+    }
+    .sunflower {
+        width: 80%;
+        height: 80%;
+        max-width: 200px;
+    }
+}
